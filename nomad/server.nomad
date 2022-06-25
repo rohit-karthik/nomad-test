@@ -1,3 +1,7 @@
+variable "IMAGE_TAG" {
+  type = string
+}
+
 job "webserver" {
   datacenters = ["dc1"]
   type = "service"
