@@ -27,7 +27,7 @@ job "webserver" {
       driver = "docker"
 
       config {
-        image = "rohitkarthik/docker_flask"
+        image = "rohitkarthik/docker_flask:${var.IMAGE_TAG}"
         ports = ["http"]
         force_pull = true
       }
