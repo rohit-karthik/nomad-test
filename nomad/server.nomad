@@ -29,6 +29,7 @@ job "webserver" {
       config {
         image = "rohitkarthik/docker_flask"
         ports = ["http"]
+        force_pull = true
       }
 
       resources {
