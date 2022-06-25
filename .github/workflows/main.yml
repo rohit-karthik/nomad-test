@@ -34,10 +34,9 @@ jobs:
           password: Kumbakonam1G
       
       - name: Build and push Docker images
-        uses: docker/build-push-action@v3.0.0
-        with:
-          push: true
-          tags: rohitkarthik/docker_flask:$GITHUB_SHA
+        run: |
+          docker build -t rohitkarthik/docker_tutorial:$GITHUB_SHA .
+          docker push rohitkarthik/docker_tutorial:$GITHUB_SHA
           
   deploy:
     runs-on: ubuntu-latest
